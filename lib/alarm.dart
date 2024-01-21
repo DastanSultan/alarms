@@ -29,7 +29,9 @@ class _MyAlarmState extends State<MyAlarm> {
           Row(
             children: [
               Text(
-                " ${AlarmClock.uhr}",
+                AlarmClock.uhr < 10
+                    ? " 0${AlarmClock.uhr}"
+                    : " ${AlarmClock.uhr}",
                 style: TextStyle(fontSize: 40, color: Colors.white),
               ),
               SizedBox(
@@ -40,7 +42,9 @@ class _MyAlarmState extends State<MyAlarm> {
                 style: TextStyle(fontSize: 40, color: Colors.white),
               ),
               Text(
-                " ${AlarmClock.min}",
+                AlarmClock.min < 10
+                    ? " 0${AlarmClock.min}"
+                    : " ${AlarmClock.min}",
                 style: TextStyle(fontSize: 40, color: Colors.white),
               ),
             ],
